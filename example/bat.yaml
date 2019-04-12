@@ -1,0 +1,7 @@
+files:
+
+ - file: ./tests/step.0.dwl
+ - file: ./tests/step.1.dwl
+
+suite:
+  name: "hello world test suite"
