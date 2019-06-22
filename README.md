@@ -14,7 +14,12 @@ bash build.sh
 The code above creates a Docker image based on maven and installs BAT. To run the docker container and execute a test suite using BAT, run the following command:
 
 ```shell
-docker run -rm -v "${PWD}/example":/usr/src/mymaven mule-blackbox-automated-testing:latest bat.yaml
+docker run --rm -v "${PWD}/example":/usr/src/mymaven mule-blackbox-automated-testing:latest bat.yaml --config=dev
+```
+If you'd prefer not to build the image yourself, you can run the following command to use one that has already bee published to Docker Hub:
+
+```shell
+docker run --rm -v "${PWD}/example":/usr/src/mymaven mikeyryan/mule-blackbox-automated-testing:latest bat.yaml --config=dev
 ```
 
 ## Related projects
